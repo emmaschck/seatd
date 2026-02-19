@@ -57,15 +57,16 @@ section {
 
 .slider-container {
   display: flex;
-  gap: 1rem;
   overflow-x: auto;
   scroll-behavior: smooth;
+  gap: 1rem;
   padding-bottom: 1rem;
 }
 
+/* Mobile: full screen width */
 .screening-card {
-  min-width: 250px;
-  flex: 0 0 auto;
+  flex: 0 0 100%;
+  max-width: 100%;
   background-color: #ffffff;
   border-radius: 8px;
   padding: 1rem;
@@ -73,16 +74,24 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/* Desktop: 1/4 width */
+@media (min-width: 768px) {
+  .screening-card {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* Image scaling */
 .screening-card img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;       /* Adjust if you prefer 16/9 etc. */
+  object-fit: cover;         /* Prevent distortion */
   border-radius: 6px;
   margin-bottom: 0.75rem;
 }
 
-.screening-card h3 {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
 
 /* ================================
    Slider Buttons

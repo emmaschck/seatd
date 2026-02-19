@@ -1,0 +1,169 @@
+/* ================================
+   Global Reset
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================================
+   Base Styles
+================================ */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #550000;
+  color: #1e1e1e;
+  line-height: 1.6;
+}
+
+section {
+  padding: 3rem 1.5rem;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ================================
+   Header
+================================ */
+
+.site-header {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background-color: #550000;
+  color: #ffffff;
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ================================
+   Slider Section
+================================ */
+
+#screenings-slider {
+  background-color: #ffffff;
+}
+
+.slider-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Desktop: show 4 cards */
+@media (min-width: 992px) {
+  .slider-container {
+    grid-auto-columns: calc(25% - 0.75rem);
+  }
+}
+
+.screening-card {
+  scroll-snap-align: start;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.screening-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 4;   /* Change to 16/9 if preferred */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+/* ================================
+   Slider Buttons
+================================ */
+
+.slider-buttons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.slider-buttons button {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.slider-buttons button:hover {
+  background-color: #333333;
+}
+
+/* ================================
+   RSVP Section
+================================ */
+
+#rsvp-form {
+  background-color: #ffffff;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.airtable-embed {
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+/* ================================
+   Footer
+================================ */
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* ================================
+   General Responsiveness
+================================ */
+
+@media (max-width: 600px) {
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+}

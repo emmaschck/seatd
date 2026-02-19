@@ -146,17 +146,3 @@ section {
   color: #ffffff;
   font-size: 0.9rem;
 }
-
-/* ================================
-   Responsive
-================================ */
-
-@media (max-width: 600px) {
-  .screening-card {
-    min-width: 200px;
-  }
-
-  .site-header h1 {
-    font-size: 2rem;
-  }
-}
